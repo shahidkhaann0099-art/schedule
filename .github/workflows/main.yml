@@ -2,11 +2,12 @@ name: schedule job
 
 on:
   schedule:
-    - cron: "55 0 * * *"   # Runs every day at 12:51 AM PKT (07:51 PM UTC)
+    - cron: "8 20 * * *"   # Runs daily at 20:08 UTC (01:08 AM PKT)
+  workflow_dispatch:        # allows you to run manually for testing
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
     steps:
       - name: print message
-        run: echo "workflow executed"
+        run: echo "workflow executed at $(date -u)"
