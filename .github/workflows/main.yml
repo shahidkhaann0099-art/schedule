@@ -1,11 +1,12 @@
 name: schedule job
+
 on:
   schedule:
-   -cron:"2412***"
-jobs: 
-run-script:
+    - cron: "38 12 * * *"   # runs every day at 12:24 UTC
 
-run-on: ubuntu-latest
-steps:
- -name: print  message 
-run: echo"hello after 10:24"
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print message
+        run: echo "workflow executed"
