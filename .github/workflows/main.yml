@@ -1,0 +1,8 @@
+name: schedule job
+on: schedule
+-cron: "1812***"
+jobs: run-script:
+run-on: ubuntu linux
+steps:
+-name: first message 
+run: echo"hello after 10:18"
