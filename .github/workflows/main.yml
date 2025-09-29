@@ -2,7 +2,7 @@ name: schedule job
 
 on:
   schedule:
-    - cron: "45 00 * * *"
+    - cron: "51 19 * * *"   # Runs every day at 12:51 AM PKT (07:51 PM UTC)
 
 jobs:
   run-script:
