@@ -1,8 +1,11 @@
 name: schedule job
-on: schedule
--cron: "1812***"
-jobs: run-script:
-run-on: ubuntu linux
+on:
+  schedule:
+   -cron:"2412***"
+jobs: 
+run-script:
+
+run-on: ubuntu-latest
 steps:
--name: first message 
-run: echo"hello after 10:18"
+ -name: print  message 
+run: echo"hello after 10:24"
